@@ -5,6 +5,7 @@
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
+    border: 1px solid crimson;
 }
 button {
     position: absolute;
@@ -37,21 +38,32 @@ button:hover {
 }
 .filters h4 {
     margin-left: 15%;
+    overflow: hidden;
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 100%;
 }
 .locations {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
+    position: relative;
 }
 .amenities {
     height: 100%;
     width: 25%;
+    position: relative;
+}
+
+.amenities li input {
+	margin-left: 20px;
 }
 
 .popover {
+    position: absolute;
     visibility: hidden;
     width: 100%;
     border: 1px solid #DDDDDD;
@@ -61,6 +73,7 @@ button:hover {
     height: 300px;
     overflow-y: scroll;
     scrollbar-width: none;
+    margin-top: 70px;
     max-height: 300px;
 }
 
@@ -70,17 +83,13 @@ button:hover {
 
 .amenities .popover {
     padding: 10px 0;
-    margin-left: -5px;
-    margin-top: 0%;
+   margin-left: -5px;
 }
 
 .amenities .popover ul{
     margin: 0px;
 }
 
-.locations .popover {
-    margin-top: 0%;
-}
 .popover ul {
     list-style-type: none;
     padding-bottom: 10px;
@@ -102,7 +111,3 @@ button:hover {
     visibility: visible;
 }
 
-.amenities h4 {
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
