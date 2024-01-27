@@ -27,6 +27,7 @@
 	    <ul>
 	      {% for state in states %}
 	      <li>
+		<input type="checkbox"
 		<h2>{{ state[0].name }}:</h2>
 		<ul>
 		  {% for city in state[1] %}
@@ -52,7 +53,7 @@
 	    </ul>
 	  </div>
 	</div>
-	<button type="button">Search</button>
+	<button type="button" id=search_btn>Search</button>
       </section>
       <div class="placesh1"><h1>Places</h1></div>
 <!--
