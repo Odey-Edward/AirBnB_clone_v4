@@ -23,4 +23,19 @@ $(document).ready(function () {
 		let amenitiesList = Object.values(selectedAmenities).join(', ');
 		$('.amenities h4').text(amenitiesList);
 	});
+
+	$('#search_btn').click(function () {
+		$.ajax({
+			type: "POST",
+			url: "http://127.0.0.1:5003//api/v1/places_search",
+			contentType: "application/json",
+			data: JSON.stringify({}),
+			success: function(response) {
+				console.log(response);
+			},
+			error: function(error) {
+				console.log(error);
+			}
+		});
+	});
 });
